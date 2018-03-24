@@ -2,11 +2,19 @@
 
 This is a Scrapy-based Web spider to scrawl useful information from public websites. Currently, included in the package is the case for scrawling the tags of public bitcoin addresses. In the future, more cases will be addeded. 
 
+The web spider depends on Scrapy. On ubuntu, it can be installed as:
+
+    $ [sudo] pip install Scrapy
+
 The web spider is easy to use:
 
-First, go to the directory tag_spider/spiders
+First, go to the directory tag_spider/spiders:
 
-Then, running the spider with: $ ./run.sh
+    $ cd tag_spider/spiders
+
+Then, running the spider: 
+
+    $ ./run.sh
 
 Note: The file run.sh includes one command of Scracpy: scrapy crawl tagspider. Just for easy use.
 
