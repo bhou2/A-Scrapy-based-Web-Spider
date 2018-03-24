@@ -14,19 +14,19 @@ Remarks:
 
 1. The number of pipelines to scrawl the webpages can be set in the file tag_spider/settings.py:
 
-ITEM_PIPELINES = {
-       'tag_spider.pipelines.BlockSpiderPipeline': 16,
-}
+       ITEM_PIPELINES = {
+           'tag_spider.pipelines.BlockSpiderPipeline': 16,
+       }
 
 The number 16 refers to the number of threads, which can be customized based on the capability of your machine.
 
 2. The file that used to save the data scrawled from the website can be set in the file tag_spider/pipelines.py:
 
-class BlockSpiderPipeline(object):
+       class BlockSpiderPipeline(object):
 
-   def open_spider(self, spider):
+           def open_spider(self, spider):
 
-       self.fp = open("data.list", "w" )
+               self.fp = open("data.list", "w" )
 
 The default file is "data.list". If necessary, the data can also be saved in a database, such as mysql. This can be customized by change the underlaying store from file to database.
 
