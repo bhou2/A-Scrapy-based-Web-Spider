@@ -31,3 +31,15 @@ class BlockSpider(scrapy.spiders.Spider):
                 'verified': 
                     address_tag[3].xpath("img/@src").extract_first().strip().split('/')[2].split('_')[0] == "red",
           }
+
+        next_page = None
+        try:
+            next_page=response.xpath("//body[@class='opaque-nav']/div[@class='container pt-100']/div[@class='center']/ul[@class='pagination']/li[@class='next ']/a/@href").extract_first().strip()
+        except:
+            pass
+
+        if next_page is not None:
+            current_url = response.request.url
+            next_page_url = current_url.split('?')[0] + next_page
+            yield scrapy.Request(response.urljoin(next_page_url))
+            
