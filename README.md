@@ -8,7 +8,9 @@ First, go to the directory tag_spider/spiders
 
 Then, running the spider with: $ ./run.sh
 
-Notes:
+Note: The file run.sh includes one command of Scracpy: scrapy crawl tagspider. Just for easy use.
+
+Remarks:
 
 1. The number of pipelines to scrawl the webpages can be set in the file tag_spider/settings.py:
 
