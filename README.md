@@ -1,6 +1,6 @@
 # A Scrapy-based Web Spider
 
-This is a Scrapy-based Web spider to scrawl useful information from public websites. Currently, included in the package is the case for scrawling the tags of public bitcoin addresses. In the future, more cases will be addeded.
+This is a Scrapy-based Web spider to scrawl useful information from public websites. Currently, included in the package is the case for scrawling the tags of public bitcoin addresses. In the future, more cases will be addeded. 
 
 The web spider is easy to use:
 
@@ -31,3 +31,7 @@ The number 16 refers to the number of threads, which can be customized based on 
 The default file is "data.list". If necessary, the data can also be saved in a database, such as mysql. This can be customized by change the underlaying store from file to database.
 
 3. The rules for scrawl are defined in the file tag_spider/spiders/tagspider.py
+
+4. More information of Scrapy can be founded at the official website https://scrapy.org/
+
+
