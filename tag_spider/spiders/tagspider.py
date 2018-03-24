@@ -33,6 +33,7 @@ class BlockSpider(scrapy.spiders.Spider):
           }
 
         next_page = None
+        
         try:
             next_page=response.xpath("//body[@class='opaque-nav']/div[@class='container pt-100']/div[@class='center']/ul[@class='pagination']/li[@class='next ']/a/@href").extract_first().strip()
         except:
